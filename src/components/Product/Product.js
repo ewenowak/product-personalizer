@@ -17,10 +17,10 @@ const Product = ({title, colors, sizes, name, basePrice}) => {
   }
 
   const getPrice = () => {
-    const found = sizes.find(element => element.name === currentSize)
-    console.log('found', found);
+    const foundSize = sizes.find(element => element.name === currentSize)
+    console.log('found', foundSize);
      
-    return basePrice + found.additionalPrice
+    return basePrice + foundSize.additionalPrice
   }
 
   return (
